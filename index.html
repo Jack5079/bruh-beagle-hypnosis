@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bruh beagle hypnosis</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        overflow: hidden;
+        height: 100%;
+        background: black;
+      }
+
+      video {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <video autoplay loop id="vid" src="vid.mp4"></video>
+    <script>
+      // autoplay everywhere
+      Object.keys(window).filter(ev => ev.startsWith('on')).forEach(ev => {
+        window[ev] = () => document.getElementById('vid').play()
+      })
+    </script>
+  </body>
+
+</html>
